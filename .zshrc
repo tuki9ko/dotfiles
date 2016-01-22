@@ -23,9 +23,10 @@ setopt interactive_comments
 alias -g ...='cd ../..'
 alias -g ....='cd ../../..'
 alias rename='noglob zmv -W'
-alias la='ls -a'
-alias lla='ls -la'
-alias lal='ls -la'
+alias ll='ls -l --color=auto'
+alias la='ls -a --color=auto'
+alias lla='ls -la --color=auto'
+alias lal='ls -la --color=auto'
 
 alias rm='rm -i'
 alias cp='cp -i'

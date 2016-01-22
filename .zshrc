@@ -38,7 +38,8 @@ alias g++='g++ -std=c++11'
 alias -g L='| less'
 alias -g G='| grep'
 
-alias shit='python3 /home/student/sen14/sy14806/ap2/kitsune/senkouka.py'
+alias shit='python3 /home/student/sen14/sy14806/ap2/fucking_ap/senkouka.py'
+alias shitbot='python3 /home/student/sen14/sy14806/ap2/fucking_ap/senkouka_bot.py'
 alias tweet='python3 /home/student/sen14/sy14806/ap2/twitter/tweet.py'
 
 #zstyle ':completion:*:default' menu select=1

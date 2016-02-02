@@ -36,7 +36,7 @@ alias mkdir='mkdir -p'
 alias cls='clear'
 alias g++='g++ -std=c++11'
 
-alias -g L='| less'
+alias -g L='| less -XF'
 alias -g G='| grep'
 
 alias shit='python3 /home/student/sen14/sy14806/ap2/fucking_ap/senkouka.py'

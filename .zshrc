@@ -32,6 +32,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
+alias less='less -XF'
 
 alias cls='clear'
 alias g++='g++ -std=c++11'

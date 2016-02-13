@@ -2,6 +2,8 @@ autoload colors; colors
 autoload -U compinit; compinit
 autoload -Uz zmv
 
+eval $(dircolors ~/dircolors/dircolors.ansi-universal)
+
 local p_cdir="%B%F{blue}[%~]%f%b"$'\n'
 local p_info="%n@%m"
 local p_mark="%(?,%F{green},%F{red})%#%f"

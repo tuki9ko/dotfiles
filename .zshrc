@@ -1,6 +1,7 @@
 autoload colors; colors
 autoload -U compinit; compinit
 autoload -Uz zmv
+autoload -U url-quote-magic
 
 eval $(dircolors ~/dircolors/dircolors.ansi-universal)
 
@@ -50,5 +51,7 @@ alias tweet='python3 /home/student/sen14/sy14806/ap2/twitter/tweet.py'
 
 #zstyle ':completion:*:default' menu select=1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+zle -N self-insert url-quote-magic
 
 WORDCHARS='?_-.[]~=&;!#$%^(){}<>'

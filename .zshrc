@@ -3,6 +3,11 @@ autoload -U compinit; compinit
 autoload -Uz zmv
 autoload -U url-quote-magic
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+#export PATH="$HOME/.ebenv/shims:$PATH"
+
 eval $(dircolors ~/dircolors/dircolors.ansi-universal)
 
 local p_cdir="%B%F{blue}[%~]%f%b"$'\n'
@@ -23,8 +28,8 @@ setopt print_eight_bit
 setopt ignore_eof
 setopt interactive_comments
 
-alias -g ...='cd ../..'
-alias -g ....='cd ../../..'
+alias -g ...='../..'
+alias -g ....='../../..'
 alias rename='noglob zmv -W'
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
@@ -40,14 +45,14 @@ alias less='less -XF'
 
 alias cls='clear'
 alias g++='g++ -std=c++11'
+alias mclog='less +F /usr/local/minecraft/logs/latest.log'
 
 alias -g L='| less -XF'
 alias -g G='| grep'
 
 alias tin='man'
-alias shit='python3 /home/student/sen14/sy14806/ap2/fucking_ap/senkouka.py'
-alias shitbot='pyhton3 /home/student/sen14/sy14806/ap2/fucking_ap/senkouka_bot.py'
-alias tweet='python3 /home/student/sen14/sy14806/ap2/twitter/tweet.py'
+#alias shit='python3 /home/student/sen14/sy14806/ap2/fucking_ap/senkouka.py'
+#alias shitbot='pyhton3 /home/student/sen14/sy14806/ap2/fucking_ap/senkouka_bot.py'
 
 #zstyle ':completion:*:default' menu select=1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'

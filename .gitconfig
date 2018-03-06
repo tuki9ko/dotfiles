@@ -1,0 +1,20 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	#name = 
+	#email = 
+[core]
+	editor = vim 
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	mg = merge
+	logd = log --oneline --graph --decorate
+	logg = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+[merge]
+	ff = false
+[pull]
+	ff = only

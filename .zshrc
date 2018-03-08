@@ -62,8 +62,6 @@ alias less='less -XF'
 
 alias cmd='cmd.exe'
 alias psh='powershell.exe'
-alias java='wincmd java'
-alias javac='wincmd javac'
 alias path='echo -e ${PATH//:/\\n}'
 alias cls='clear'
 alias cin='win32yank.exe -i'

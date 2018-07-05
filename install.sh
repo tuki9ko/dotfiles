@@ -12,7 +12,7 @@ done < <(find dotfiles -mindepth 1 -maxdepth 1 -print0)
 
 unlink install.sh
 
-Please set name and email to .gitconfig!
+echo Please set name and email to .gitconfig!
 
 enjoy!
 

@@ -2,9 +2,25 @@ local p_cdir="%B%F{blue}[%~]%f%b"$'\n'
 local p_info="%n@%m"
 local p_mark="%(?,%F{green},%F{red})%#%f"
 
-PROMPT=" $p_cdir$p_info $p_mark "
+#PROMPT=" $p_cdir$p_info $p_mark "
+PROMPT='`lprompt`'
 SPROMPT="%r is correct? [n,y,a,e]: "
 RPROMPT='`rprompt-st`%{$fg_bold[cyan]%}%{$reset_color%}'
+
+function lprompt {
+	FIRST='178m%}'
+	FIRST_B='237m%}'
+	SECOND='007m%}'
+	SECOND_B='067m%}'
+
+	sharp='\uE0B0'
+	FG='%{[38;5;'
+	BG='%{[30;48;5;'
+	RESET='%{[0m%}'
+	USER_AND_HOST="${BG}${FIRST_B}${FG}${FIRST}"
+	DIR="${BG}${SECOND_B}${FG}${SECOND}"
+	echo "${USER_AND_HOST}%n@%m${BG}${SECOND_B}${FG}${FIRST_B}${sharp} ${DIR}%~${RESET}${FG}${SECOND_B}${sharp} ${RESET}"
+}
 
 function rprompt-git(){
 	local name st color
@@ -23,7 +39,7 @@ function rprompt-git(){
 	else
 		color=${fg[red]}
 	fi
-	echo "(%{$color%}$name%{$reset_color%}) "
+	echo "(%{$color%}\uE0A0$name%{$reset_color%})"
 }
 
 function rprompt-svn(){

@@ -1,3 +1,3 @@
-for i in ./.zsh/*.zsh; do
+for i in $HOME/.zsh/*.zsh; do
 	source $i
 done

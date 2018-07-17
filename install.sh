@@ -14,5 +14,5 @@ unlink install.sh
 
 echo Please set name and email to .gitconfig!
 
-enjoy!
+echo enjoy!
 

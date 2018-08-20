@@ -29,12 +29,21 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
 alias less='less -XF'
+alias last-all='last -adixFw'
 
-alias cmd='cmd.exe'
-alias psh='powershell.exe'
-alias path='echo -e ${PATH//:/\\n}'
+# WSL
+if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
+	alias cmd='cmd.exe'
+	alias psh='powershell.exe'
+	alias path='echo -e ${PATH//:/\\n}'
+	alias cin='win32yank.exe -i'
+	alias cout='win32yank.exe -o'
+fi
+
 alias cls='clear'
-alias cin='win32yank.exe -i'
-alias cout='win32yank.exe -o'
-alias vim='nvim'
-alias vi='nvim'
+
+# neovim
+if type nvim >/dev/null 2>&1; then
+	alias vim='nvim'
+	alias vi='nvim'
+fi

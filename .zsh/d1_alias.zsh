@@ -33,6 +33,7 @@ alias last-all='last -adixFw'
 
 # WSL
 if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
+	alias exp='explorer.exe'
 	alias cmd='cmd.exe'
 	alias psh='powershell.exe'
 	alias path='echo -e ${PATH//:/\\n}'
@@ -41,6 +42,10 @@ if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
 fi
 
 alias cls='clear'
+
+if type pwsh-preview >/dev/null 2>&1; then
+	alias pwsh='pwsh-preview'
+fi
 
 # neovim
 if type nvim >/dev/null 2>&1; then

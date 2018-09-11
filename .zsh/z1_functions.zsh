@@ -51,3 +51,8 @@ function crontab(){
 	done
 	command crontab "$@"
 }
+
+# ファイル,ディレクトリ,コマンドなどの存在チェック
+function exist(){
+	return `type $1 > /dev/null 2>&1`
+}

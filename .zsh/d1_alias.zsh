@@ -30,6 +30,7 @@ alias mv='mv -i'
 alias mkdir='mkdir -p'
 alias less='less -XF'
 alias last-all='last -adixFw'
+alias git='noglob git'
 
 # WSL
 if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
@@ -39,6 +40,10 @@ if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
 	alias path='echo -e ${PATH//:/\\n}'
 	alias cin='win32yank.exe -i'
 	alias cout='win32yank.exe -o'
+	
+	if type code-insiders.cmd >/dev/null 2>&1; then
+		alias code='code-insiders.cmd'
+	fi
 fi
 
 alias cls='clear'

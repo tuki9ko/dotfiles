@@ -5,6 +5,10 @@
 	#email = 
 [core]
 	editor = vim 
+	ignorecase = false
+	quotepath = false
+	safecrlf = true
+	autocrlf = false
 [alias]
 	st = status
 	ci = commit
@@ -18,3 +22,5 @@
 	ff = false
 [pull]
 	ff = only
+[push]
+	default = simple

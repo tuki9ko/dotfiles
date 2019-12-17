@@ -9,6 +9,8 @@
 	quotepath = false
 	safecrlf = true
 	autocrlf = false
+[color]
+	ui = auto
 [alias]
 	st = status
 	ci = commit
@@ -16,6 +18,7 @@
 	co = checkout
 	df = diff
 	mg = merge
+	gr = log --pretty=format:'%Cgreen[%cd] %C(yellow)%h %Cblue<%cn> %Creset%s %Cred%d%Creset' --date=short  --decorate --graph --branches --tags --remotes
 	logd = log --oneline --graph --decorate
 	logg = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 [merge]

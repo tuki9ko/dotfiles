@@ -9,16 +9,23 @@
 	quotepath = false
 	safecrlf = true
 	autocrlf = false
+	excludesfile = ~/.gitignore
 [color]
 	ui = auto
+[diff]
+	renames = true
+[fetch]
+	prune = true
 [alias]
 	st = status
 	ci = commit
 	br = branch
 	co = checkout
-	df = diff
+	cl = clone
+	df = diff --ignore-all-space --color-words
 	mg = merge
-	gr = log --pretty=format:'%Cgreen[%cd] %C(yellow)%h %Cblue<%cn> %Creset%s %Cred%d%Creset' --date=short  --decorate --graph --branches --tags --remotes
+	hist = log --patch
+	tree = log --pretty=format:'%Cgreen[%cd] %C(yellow)%h %Cblue<%cn> %Creset%s %Cred%d%Creset' --date=short  --decorate --graph --branches --tags --remotes
 	logd = log --oneline --graph --decorate
 	logg = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 [merge]

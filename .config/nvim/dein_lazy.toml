@@ -1,0 +1,15 @@
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+on_ft = [['md', 'markdown']]
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = [['html', 'xhtml', 'xml']]
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
+on_ft = [['html', 'xhtml', 'xml']]
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = [['coffee']]

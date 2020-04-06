@@ -56,3 +56,31 @@ function crontab(){
 function exist(){
 	return `type $1 > /dev/null 2>&1`
 }
+
+# プラべ用のアカウントで git init(グローバルは仕事用)
+function git-formal-init(){
+	git init
+	git config --local user.name "tuki9ko"
+	git config --local user.email "arkmisha@gmail.com"
+}
+
+# プラべ用のアカウントで過去改変
+function fix-formal-committer(){
+	echo '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+	echo '@    WARNING: THIS COMMAND REWRITES HISTORY!!    @'
+	echo '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+	echo 'Are you sure you want to continue executing [y/N]? >'
+	
+	read answer
+	answer=`printf $answer | grep -iE '^(yes|y|no|n)$' | tr "[:lower:]" "[:upper:]"`
+
+	case "$answer" in
+		"Y" | "YES" )
+			git filter-branch -f --env-filter "GIT_AUTHOR_NAME='tuki9ko'; GIT_AUTHOR_EMAIL='arkmisha@gmail.com'; GIT_COMMITTER_NAME='tuki9ko'; GIT_COMMITTER_EMAIL='arkmisha@gmail.com';" HEAD
+			echo 'Done. If you use remote branch, please execute `git push -f ...` .'
+			;;
+		"*" )
+			echo 'Aborted'
+			;;
+	esac
+}

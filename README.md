@@ -17,5 +17,3 @@ dotfiles
 
 - .gitconfig
 	- 仕事用とそうじゃない用のアカウントを使い分けるためにあえて不完全な設定にしてます。もっと良い方法があったら直す
-- .vimrc
-	- 普段 NeoVim を使ってるので不完全な設定になってます(怠慢)。NeoVim の設定は現状リポジトリを分けてます->[nvim_conf](https://github.com/tuki9ko/nvim_conf.git)。統合は考えてるけど気が向かない。

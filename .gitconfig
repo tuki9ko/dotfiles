@@ -23,7 +23,11 @@
 	co = checkout
 	cl = clone
 	df = diff --ignore-all-space --color-words
+	ft = fetch
 	mg = merge
+	rb = rebase
+	sv = stash save
+	ap = stash apply
 	hist = log --patch
 	tree = log --pretty=format:'%Cgreen[%cd] %C(yellow)%h %Cblue<%cn> %Creset%s %Cred%d%Creset' --date=short  --decorate --graph --branches --tags --remotes
 	logd = log --oneline --graph --decorate

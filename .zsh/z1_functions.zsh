@@ -84,3 +84,11 @@ function fix-formal-committer(){
 			;;
 	esac
 }
+
+function git(){
+	if [[ `pwd -P` =~ ^/mnt/[a-zA-Z]/?.*$ ]]; then
+		noglob /mnt/c/Program\ Files/Git/bin/git.exe "$@"
+	else
+		noglob /usr/bin/git "$@"
+	fi
+}

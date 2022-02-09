@@ -14,3 +14,4 @@ setopt auto_param_keys
 setopt auto_param_slash
 setopt numeric_glob_sort
 setopt equals
+setopt share_history
